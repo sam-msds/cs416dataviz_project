@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>COVID-19 Narrative Visualization</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://d3js.org/d3.v7.min.js"></script>
+	<script src="https://rawgit.com/susielu/d3-annotation/master/d3-annotation.min.js"></script>
+</head>
+<body>
+	
+	<h1>Coronavirus in the U.S.: Comparitive study on U.S. states and territories</h1>
+
+	<p>As of Mar. 20, there have been more than 103 million confirmed coronavirus infections in the United States and more than 1 million people have died of COVID-19.
+		In this website, we will study covid 19 trends like cumulative cases, incremental cases, deaths for the overall United States. And then we will see the same analysis
+		for each state and territory in the United States to do a comparative analysis. This will help in understanding if the specific state growth rate matches with national average
+		or the state has a different trend to reveal.
+		We will also study a treemap where we can find how each state is contributing towards national case count.
+		</p>
+
+	<div id="usCanvas1">
+		<p>First, We will study Covid19 cases and deaths in overall United States.Below Chart reppresnt A line graph of the cumulative number of COVID-19 cases in the United States for each day till date</p>
+		<p>Please Hover over the line chart to see how many total cases and total deaths were reported on a specific day.
+	</div>
+
+	<div id="usCanvas2">
+		<p>Below Chart reppresnt A bar chart of the rate of increase of COVID-19 cases in the United States for each day till date</p>
+		<p> Please Hover over a bar in the bar chart to see, for a given day, what the increase in the number of cases were compared to the previous day. 
+			<br>You can also use you mouse to zoom in on an area in the bar chart</br></p>
+	</div>
+
+	<br><br>
+	<div id="stateCanvas">
+		<p>Now, We will study Covid19 cases and deaths in each State and territory in the United States.Use the dropdown menu below to select a U.S. state or terriory </p>
+		<ul>
+			<li>A line graph of the total number of COVID-19 cases in the selected state or territory each day since the first recoded date of COVID-19 cases in that state or territory</li>
+			<li>A bar chart of the rate of increase of COVID-19 cases in the selected state or territory each day since since the first recoded date of COVID-19 cases in that state or territory</li>
+		</ul>
+		<p>The controls in the charts above also apply to the charts below. You can use the dropdown to change the selected state or territory, which will change the data shown in the charts below</p>
+		<div id="stateSelect">
+			Select a State or Terriory:&nbsp;<select id="states" name="states">
+				<option disabled>---Select-an-Option---</option>
+			</select>
+		</div>
+	</div>
+	<div id="mapCanvas">
+		<p>Below is the treemap of COVID-19 cases in the US on a given day ,where we can find how each state is contributing towards national case count </p>
+		<ul>
+			<li>The <span class="ne-tree">red</span> region indicates states that are in the Northeast region of the United States</li>
+			<li>The <span class="st-tree">blue</span> region indicates states that are in the Southern region of the United States</li>
+			<li>The <span class="mw-tree">green</span> region indicates states that are in the Midwest region of the United States</li>
+			<li>The <span class="wt-tree">orange</span> region indicates states that are in the Western region of the United States</li>
+			<li>The <span class="ter-tree">yellow</span> region indicates United States territories</li>
+		</ul>
+		<p>Hover over each box to display the data for each state; The number of cases a state has on the displayed date, as well the percentage of the national total those cases represent for that date</p>
+		<div id="dateSelect">
+			<p>Drag the slider to scroll across the data:</p>
+			<input type="range" id="dateSlider" name="dateSlider">
+		</div>
+	</div>
+	
+	<script type="module" src="mainscript.js"></script>
+</body>
+</html>

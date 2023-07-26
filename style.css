@@ -1,0 +1,114 @@
+@font-face {
+	font-family: "Georgia";
+	src: url(/Georgia.ttf);
+	font-style: normal;
+	font-weight: 300;
+}
+p {
+	margin: 35px;
+  }
+
+body {
+	font-family: "Georgia";
+}
+
+h1, h2, #stateCanvas #stateSelect, #mapCanvas #dateSelect, footer {
+	display: flex;
+}
+
+h1, h2, #stateCanvas #stateSelect{
+	justify-content: center;
+}
+
+#mapCanvas #dateSelect {
+	flex-direction: column;
+	align-items: center;
+}
+
+#dateSlider {
+	width: 90%;
+}
+
+#stateSelect, #dateSelect {
+	padding-top: 2.5em;
+	padding-bottom: 2.5em;
+}
+
+svg {
+	display: block;
+	margin: auto;
+}
+
+.line-set {
+	fill: none;
+	stroke-width: 1.5;
+	stroke-linejoin: round;
+	stroke-linecap: round;
+	stroke: rgb(14, 132, 229);
+}
+
+/* ------------------------------------This section is for setting the colors of the treemap rects------------------------------------ */
+
+.ne-tree {
+	fill: #bf3535;
+	color: #bf3535;
+}
+
+.mw-tree {
+	fill: #76d795;
+	color: #76d795;
+}
+
+.st-tree {
+	fill: #76b0d7;
+	color: #76b0d7;
+}
+
+.wt-tree {
+	fill: #d68f25;
+	color: #d68f25;
+}
+
+.ter-tree {
+	fill: #c6f200;
+	color: #c6f200;
+}
+
+.title-size {
+	font-size: 0.85em;
+}
+
+/* -------------------------------------------------End of the treemap rects section------------------------------------------------- */
+
+
+/* -----------------------------------This section is for setting the stoke of the bar graph rects----------------------------------- */
+
+.all-bars {
+	fill: rgb(133, 183, 220);
+	stroke: black;
+	box-sizing: inherit;
+}
+
+.stroke-active {
+	stroke-width: 1.75;
+}
+
+.stroke-inactive {
+	stroke-width: 0.2;
+}
+
+/* ------------------------------------------------End of the bar graph rects section------------------------------------------------ */
+
+.tooltip {
+	position: absolute;
+	text-align: center;
+	background-color: rgb(231, 217, 217);
+	border: .125em solid;
+	border-radius: .3125em;
+	padding: .3125em;
+	pointer-events: none;
+}
+
+footer {
+	justify-content: space-evenly;
+}
